@@ -1,15 +1,16 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Book from '@/components/Book'
-Vue.use(Router)
+import VueRouter from 'vue-router'
+import HelloWorld from '@/components/HelloWorld.vue'
+import Book from '@/components/Book.vue'
 
-export default new Router({
+export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/',
+      component: Book
     }
   ]
 })
