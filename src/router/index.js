@@ -5,11 +5,11 @@ import Book from '@/components/Book.vue'
 export default new VueRouter({
   routes: [
     {
-      path: '/',
+      path: '/HelloWorld',
       component: HelloWorld
     },
     {
-      path: '/',
+      path: '/Book',
       component: Book
     }
   ]
