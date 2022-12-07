@@ -61,6 +61,16 @@ export default {
                 zip: 200333
             }]
         }
+    },
+    created() {
+        //处理this作用域问题
+        const _this = this
+        alert(this)
+        this.$ajax.get("http://127.0.0.1:8012/mydb/user/2").then(function (resp) {
+            alert(111)
+            _this.tableData = resp.data.content//获取数据
+            _this.total = resp.data.totalElements //获取总页数
+        });
     }
 }
 </script>
